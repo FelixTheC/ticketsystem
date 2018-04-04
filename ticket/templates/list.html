@@ -1,0 +1,69 @@
+{% extends 'base.html' %}
+{% block content %}
+
+<div class="col-md-12 col-lg-12">
+    <h1 style="margin-left:40%">Ticket Manager</h1>
+    <a href="{% url 'ticket:create_ticket' %}" class="btn btn-primary" style="float:right">Create Ticket</a>
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <td><b>Created At</b></td>
+                <td><b>Subject</b></td>
+                <td><b>From</b></td>
+                <td><b>Comment</b></td>
+                <td><b>Prioritaet</b></td>
+                <td><b>Progress</b></td>
+                <td><b>Assigned to</b></td>
+                <td><b>Update Comment</b></td>
+                <td></td>
+                <td><b>Edit</b></td>
+            </tr>
+        </thead>
+        <tbody>
+        {% for ticket in tickets %}
+            {% if ticket.prioritaet.pk == 1 %}
+                <tr style="background-color:indianred">
+            {% elif ticket.prioritaet.pk == 2 %}
+                <tr style="background-color:coral">
+            {% elif ticket.prioritaet.pk == 3 %}
+                <tr style="background-color:darkseagreen">
+            {% else %}
+                <tr>
+            {% endif %}
+            <td>{{ ticket.created_at }}</td>
+            <td>{{ ticket.subject }}</td>
+            <td>{{ ticket.from_email }}</td>
+            <td>{{ ticket.comment|truncatechars:30 }}</td>
+            <td>{{ ticket.prioritaet }}</td>
+            <td>{{ ticket.progress }}</td>
+            <td>{{ ticket.assigned_to }}</td>
+            <td><a href="{{ ticket.get_update_comment_url }}">Update Comment</a></td>
+            <!--<td>-->
+                <!--<form action="{% url 'ticket:update_done' ticket.pk %}", method="post" style="display: -webkit-inline-box;">-->
+                    <!--{% csrf_token %}-->
+                    <!--{{ done_form.as_p }}-->
+                    <!--<input type="submit" value="Done" class="btn btn-primary btn-sm" style="margin-left: 10px;">-->
+                <!--</form>-->
+            <!--</td>-->
+            {% if ticket.file %}
+                <td><a href="{{ ticket.get_attachment }}">File</a></td>
+            {% else %}
+                <td></td>
+            {% endif %}
+            <td><a href="{{ ticket.get_admin_url }}">Edit</a></td>
+        </tr>
+
+    {% endfor %}
+        </tbody>
+    </table>
+</div>
+
+{% endblock %}
+{% block script %}
+<script>
+    function reload() {
+            location.reload();
+        }
+    $(document).ready(setTimeout(reload, 18000));
+</script>
+{% endblock %}

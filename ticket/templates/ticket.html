@@ -1,0 +1,30 @@
+{% extends 'base.html' %}
+{% block content %}
+<div class="col-md-offset-3 col-md-9 col-lg-offset-3 col-lg-9">
+<nav style="float:right">
+    <a href="{% url 'ticket:list' %}"class="btn btn-info">To Overview</a>
+</nav>
+    <div class="col-md-5 col-lg-5">
+        <h1>Create a new Ticket</h1>
+        <form action="." method="post" enctype="multipart/form-data">
+            {% csrf_token %}
+            {{ form.as_p }}
+            <input type="submit" value="Create/Submit" class="btn btn-primary btn-block">
+        </form>
+    </div>
+
+</div>
+{% endblock %}
+{% block script %}
+<script>
+    $(document).ready(function(){
+        $('#created_at').val(new Date().toISOString().replace('T', ' ').split('.')[0]);
+
+        var editor = new wysihtml5.Editor("wysihtml5-textarea", { // id of textarea element
+            toolbar:      "wysihtml5-toolbar", // id of toolbar element
+            parserRules:  wysihtml5ParserRules // defined in parser rules set
+        });
+
+    });
+</script>
+{% endblock %}
