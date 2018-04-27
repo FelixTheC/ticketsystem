@@ -58,12 +58,12 @@ class TicketCreateView(CreateView):
     form_class = TicketForm
     template_name = 'ticket.html'
 
-    # def form_valid(self, form):
-    #     form = TicketForm(self.request.POST)
-    #     for afile in self.request.FILES.getlist('file'):
-    #         path = str(self.request.POST['subject']) + '/'
-    #         handle_uploaded_file(afile, path, str(afile))
-    #     return super(TicketCreateView, self).form_valid(form)
+    def form_valid(self, form):
+        # form = TicketForm(self.request.POST)
+        # for afile in self.request.FILES.getlist('file'):
+        #     path = str(self.request.POST['subject']) + '/'
+        #     handle_uploaded_file(afile, path, str(afile))
+        return super(TicketCreateView, self).form_valid(form)
 
     def get_success_url(self):
         return reverse('ticket:list')

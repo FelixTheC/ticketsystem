@@ -9,7 +9,7 @@ from .signals import send_mail_create_receiver
 
 
 def file_upload_path(instance, filename, **kwargs):
-    return '/'.join(['media', str(instance.subject), filename])
+    return '/'.join(['media', str(instance.subject), filename.replace(' ', '_')])
 
 
 class DjangoMailboxMailbox(models.Model):
