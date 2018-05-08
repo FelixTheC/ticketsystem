@@ -24,7 +24,7 @@ def send_mail_create_receiver(sender, instance, *args, **kwargs):
         send_mail(
             subject=f'[Ticketsystem] {instance.subject}',
             message=f'A new ticket was created \n\n Subject: {instance.subject} \n\n'
-                    f' http://192.168.0.34:9004/admin/ticket/ticket/ {instance.pk} /change/',
+                    f' http://192.168.0.34:9004/admin/ticket/ticket/{instance.pk}/change/',
             from_email=staff.email,
             recipient_list=['it@vectronic-aerospace.com'],
             fail_silently=False
