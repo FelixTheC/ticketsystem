@@ -9,8 +9,9 @@ def send_mail_done_receiver(sender, instance, *args, **kwargs):
     if instance.done == True:
         staff_obj = Staff.objects.get(initialies=instance.from_email)
         send_mail(
-            subject='[Ticketsystem] ' + instance.subject,
-            message='Your Subject: ' + instance.subject + '\n\n We could resolve your Problem \n\n With best regards your it-Team from VECTRONIC Aerospace ',
+            subject=f'[Ticketsystem] {instance.subject}',
+            message=f'Your Subject: {instance.subject} \n\n We could resolve your Problem '
+                    f'\n\n With best regards your it-Team from VECTRONIC Aerospace ',
             from_email='it@vectronic-aerospace.com',
             recipient_list=[staff_obj.email],
             fail_silently=False
@@ -21,9 +22,9 @@ def send_mail_create_receiver(sender, instance, *args, **kwargs):
     staff = Staff.objects.get(initialies=instance.from_email)
     if kwargs['created'] == True:
         send_mail(
-            subject='[Ticketsystem] ' + instance.subject,
-            message='A new ticket was created \n\n Subject: ' + instance.subject +
-                    '\n\n http://192.168.0.34:9004/admin/ticket/ticket/' + str(instance.pk) + '/change/',
+            subject=f'[Ticketsystem] {instance.subject}',
+            message=f'A new ticket was created \n\n Subject: {instance.subject} \n\n'
+                    f' http://192.168.0.34:9004/admin/ticket/ticket/ {instance.pk} /change/',
             from_email=staff.email,
             recipient_list=['it@vectronic-aerospace.com'],
             fail_silently=False
