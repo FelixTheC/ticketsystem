@@ -10,7 +10,7 @@ def send_done_mail(obj):
     staff_obj = Staff.objects.get(initialies=obj.from_email)
     send_mail(
         subject=f'{obj.subject} - DONE',
-        message=f'Your Subject: {obj.subject} \n\n Your Ticketmessage:  obj.comment \n\n '
+        message=f'Your Subject: {obj.subject} \n\n Your Ticketmessage:  {obj.comment} \n\n '
                 f'IT-Notice:\n\n {obj.progress} \n\nWe could resolve your Problem \n\nWith best regards from  {obj.assigned_to}',
         from_email='it@vectronic-aerospace.com',
         recipient_list=[staff_obj.email],
