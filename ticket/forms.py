@@ -12,19 +12,19 @@ for staff in Staff.objects.all():
 class PrioForm(forms.ModelForm):
     class Meta:
         model = Ticket
-        exclude = ['subject', 'from_email', 'comment', 'file', 'progress', 'done', 'created_at']
+        exclude = ['subject', 'from_email', 'comment', 'file', 'progress', 'done', 'created_at', ]
 
 
 class DoneForm(forms.ModelForm):
     class Meta:
         model = Ticket
-        exclude = ['subject', 'from_email', 'comment', 'file', 'prioritaet', 'progress', 'created_at']
+        exclude = ['subject', 'from_email', 'comment', 'file', 'prioritaet', 'progress', 'created_at', ]
 
 
 class TicketForm(forms.ModelForm):
     class Meta:
         model = Ticket
-        exclude = ['progress', 'done', 'assigned_to']
+        exclude = ['progress', 'done', 'assigned_to', 'it_status', 'finished_until', ]
         titles = {
             'from_email': 'Staff'
         }

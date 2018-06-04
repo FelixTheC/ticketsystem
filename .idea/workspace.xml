@@ -2,7 +2,91 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="57621cb9-1158-4303-9e7f-b4739f22081c" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/ticket/signals.py" beforeDir="false" afterPath="$PROJECT_DIR$/ticket/signals.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/check.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/empty.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/js/Keyboard-master.zip" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/js/jquery-ui-1.12.1.custom/AUTHORS.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/js/jquery-ui-1.12.1.custom/LICENSE.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/js/jquery-ui-1.12.1.custom/external/jquery/jquery.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/js/jquery-ui-1.12.1.custom/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/js/jquery-ui-1.12.1.custom/jquery-ui.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/js/jquery-ui-1.12.1.custom/jquery-ui.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/js/jquery-ui-1.12.1.custom/jquery-ui.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/js/jquery-ui-1.12.1.custom/jquery-ui.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/js/jquery-ui-1.12.1.custom/jquery-ui.structure.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/js/jquery-ui-1.12.1.custom/jquery-ui.structure.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/js/jquery-ui-1.12.1.custom/jquery-ui.theme.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/js/jquery-ui-1.12.1.custom/jquery-ui.theme.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/js/jquery-ui-1.12.1.custom/package.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/js/tablesorter-master/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/js/tablesorter-master/LICENSE" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/js/tablesorter-master/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/js/tablesorter-master/addons/pager/jquery.tablesorter.pager.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/js/tablesorter-master/addons/pager/jquery.tablesorter.pager.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/js/tablesorter-master/bower.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/js/tablesorter-master/build.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/js/tablesorter-master/build/ParseMaster.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/js/tablesorter-master/build/js.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/js/tablesorter-master/build/jsmin.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/js/tablesorter-master/build/min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/js/tablesorter-master/build/pack.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/js/tablesorter-master/build/packer.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/js/tablesorter-master/build/writeFile.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/js/tablesorter-master/changelog" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/js/tablesorter-master/docs/assets/ajax-content.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/js/tablesorter-master/docs/css/jq.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/js/tablesorter-master/docs/example-ajax.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/js/tablesorter-master/docs/example-attribute-sort.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/js/tablesorter-master/docs/example-empty-table.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/js/tablesorter-master/docs/example-extending-defaults.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/js/tablesorter-master/docs/example-meta-headers.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/js/tablesorter-master/docs/example-meta-parsers.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/js/tablesorter-master/docs/example-meta-sort-list.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/js/tablesorter-master/docs/example-option-debug.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/js/tablesorter-master/docs/example-option-digits.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/js/tablesorter-master/docs/example-option-sort-force.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/js/tablesorter-master/docs/example-option-sort-key.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/js/tablesorter-master/docs/example-option-sort-list.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/js/tablesorter-master/docs/example-option-sort-order.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/js/tablesorter-master/docs/example-option-text-extraction.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/js/tablesorter-master/docs/example-options-headers.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/js/tablesorter-master/docs/example-pager.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/js/tablesorter-master/docs/example-parsers.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/js/tablesorter-master/docs/example-trigger-sort.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/js/tablesorter-master/docs/example-triggers.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/js/tablesorter-master/docs/example-update-cell.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/js/tablesorter-master/docs/example-widgets.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/js/tablesorter-master/docs/img/external.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/js/tablesorter-master/docs/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/js/tablesorter-master/docs/js/docs.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/js/tablesorter-master/docs/js/examples.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/js/tablesorter-master/jquery-latest.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/js/tablesorter-master/jquery.metadata.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/js/tablesorter-master/jquery.tablesorter.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/js/tablesorter-master/jquery.tablesorter.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/js/tablesorter-master/package.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/js/tablesorter-master/themes/blue/asc.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/js/tablesorter-master/themes/blue/bg.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/js/tablesorter-master/themes/blue/blue.zip" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/js/tablesorter-master/themes/blue/desc.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/js/tablesorter-master/themes/blue/style.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/js/tablesorter-master/themes/green/asc.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/js/tablesorter-master/themes/green/bg.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/js/tablesorter-master/themes/green/desc.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/js/tablesorter-master/themes/green/green.zip" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/js/tablesorter-master/themes/green/style.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/new_logo_2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/newlogo.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ticket/utils.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ticket/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/ticket/admin.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ticket/forms.py" beforeDir="false" afterPath="$PROJECT_DIR$/ticket/forms.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ticket/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/ticket/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ticket/templates/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/ticket/templates/base.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ticket/templates/list.html" beforeDir="false" afterPath="$PROJECT_DIR$/ticket/templates/list.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ticket/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/ticket/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ticket/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/ticket/views.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -13,11 +97,16 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="signals.py" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/ticket/signals.py">
+      <file leaf-file-name="list.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/ticket/templates/list.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="285">
-              <caret line="23" column="18" lean-forward="true" selection-start-line="22" selection-start-column="33" selection-end-line="23" selection-end-column="18" />
+            <state relative-caret-position="270">
+              <caret line="18" column="58" selection-start-line="18" selection-start-column="58" selection-end-line="18" selection-end-column="58" />
+              <folding>
+                <element signature="n#style#0;n#tr#0;n#tbody#0;n#table#0;n#div#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#tr#1;n#tbody#0;n#table#0;n#div#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#tr#2;n#tbody#0;n#table#0;n#div#0;n#!!top" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -25,11 +114,80 @@
       <file leaf-file-name="admin.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/ticket/admin.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="480">
-              <caret line="32" column="79" selection-start-line="32" selection-start-column="79" selection-end-line="32" selection-end-column="79" />
+            <state relative-caret-position="442">
+              <caret line="52" column="56" selection-start-line="52" selection-start-column="56" selection-end-line="52" selection-end-column="56" />
               <folding>
                 <element signature="e#0#32#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="settings.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/ticketsystem/settings.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="545">
+              <caret line="145" selection-start-line="145" selection-end-line="145" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="base.html" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/ticket/templates/base.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="225">
+              <caret line="15" column="72" selection-start-line="15" selection-start-column="72" selection-end-line="15" selection-end-column="72" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="utils.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/ticket/utils.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="170">
+              <caret line="16" column="21" selection-start-line="16" selection-start-column="21" selection-end-line="16" selection-end-column="21" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="models.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/ticket/models.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="466">
+              <caret line="119" column="4" selection-start-line="119" selection-start-column="4" selection-end-line="122" selection-end-column="10" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="views.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/ticket/views.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-708">
+              <caret line="76" column="21" selection-start-line="76" selection-start-column="21" selection-end-line="76" selection-end-column="21" />
+              <folding>
+                <element signature="e#0#9#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="urls.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/ticket/urls.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="315">
+              <caret line="21" column="1" lean-forward="true" selection-start-line="21" selection-start-column="1" selection-end-line="21" selection-end-column="1" />
+              <folding>
+                <element signature="e#0#32#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="urls.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/ticketsystem/urls.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="330">
+              <caret line="26" column="72" lean-forward="true" selection-start-line="26" selection-start-column="72" selection-end-line="26" selection-end-column="72" />
             </state>
           </provider>
         </entry>
@@ -64,25 +222,26 @@
         <option value="$PROJECT_DIR$/ticket/templatetags/encode_tag.py" />
         <option value="$PROJECT_DIR$/staff/StaffRouter.py" />
         <option value="$PROJECT_DIR$/ticket/templates/detail.html" />
-        <option value="$PROJECT_DIR$/ticket/urls.py" />
         <option value="$PROJECT_DIR$/ticket/templates/admin/change_form.html" />
         <option value="$PROJECT_DIR$/ticket/extras.py" />
         <option value="$PROJECT_DIR$/staff/models.py" />
         <option value="$PROJECT_DIR$/ticket/tests/__init__.py" />
         <option value="$PROJECT_DIR$/ticket/tests/test_models.py" />
         <option value="$PROJECT_DIR$/ticketsystem/urls.py" />
-        <option value="$PROJECT_DIR$/ticket/templates/list.html" />
         <option value="$PROJECT_DIR$/projects/models.py" />
         <option value="$PROJECT_DIR$/ticket/migrations/0016_ticket_project.py" />
-        <option value="$PROJECT_DIR$/ticket/forms.py" />
         <option value="$PROJECT_DIR$/projects/admin.py" />
         <option value="$PROJECT_DIR$/ticket/templates/ticket.html" />
-        <option value="$PROJECT_DIR$/ticket/templates/base.html" />
+        <option value="$PROJECT_DIR$/ticket/signals.py" />
+        <option value="$PROJECT_DIR$/ticket/forms.py" />
+        <option value="$PROJECT_DIR$/ticket/urls.py" />
         <option value="$PROJECT_DIR$/ticket/models.py" />
+        <option value="$PROJECT_DIR$/ticket/utils.py" />
         <option value="$PROJECT_DIR$/ticket/views.py" />
+        <option value="$PROJECT_DIR$/ticket/templates/list.html" />
         <option value="$PROJECT_DIR$/ticketsystem/settings.py" />
         <option value="$PROJECT_DIR$/ticket/admin.py" />
-        <option value="$PROJECT_DIR$/ticket/signals.py" />
+        <option value="$PROJECT_DIR$/ticket/templates/base.html" />
       </list>
     </option>
   </component>
@@ -93,12 +252,16 @@
     <sorting>DEFINITION_ORDER</sorting>
   </component>
   <component name="NodePackageJsonFileManager">
-    <packageJsonPaths />
+    <packageJsonPaths>
+      <path value="$PROJECT_DIR$/static/js/Keyboard-master/package.json" />
+      <path value="$PROJECT_DIR$/static/js/jquery-ui-1.12.1.custom/package.json" />
+      <path value="$PROJECT_DIR$/static/js/tablesorter-master/package.json" />
+    </packageJsonPaths>
   </component>
   <component name="ProjectFrameBounds">
     <option name="y" value="23" />
-    <option name="width" value="2558" />
-    <option name="height" value="1333" />
+    <option name="width" value="2560" />
+    <option name="height" value="1339" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -106,7 +269,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -114,25 +276,11 @@
               <item name="ticketsystem" type="b2602c69:ProjectViewProjectNode" />
               <item name="ticketsystem" type="462c0819:PsiDirectoryNode" />
             </path>
-            <path>
-              <item name="ticketsystem" type="b2602c69:ProjectViewProjectNode" />
-              <item name="ticketsystem" type="462c0819:PsiDirectoryNode" />
-              <item name="staff" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="ticketsystem" type="b2602c69:ProjectViewProjectNode" />
-              <item name="ticketsystem" type="462c0819:PsiDirectoryNode" />
-              <item name="ticket" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="ticketsystem" type="b2602c69:ProjectViewProjectNode" />
-              <item name="ticketsystem" type="462c0819:PsiDirectoryNode" />
-              <item name="ticketsystem" type="462c0819:PsiDirectoryNode" />
-            </path>
           </expand>
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -142,17 +290,18 @@
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/media/None" />
-      <recent name="$PROJECT_DIR$/staff" />
-      <recent name="$PROJECT_DIR$/ticket/templates" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/static" />
       <recent name="$PROJECT_DIR$/static/static" />
       <recent name="$PROJECT_DIR$/ticket/tests" />
       <recent name="$PROJECT_DIR$/media" />
       <recent name="$PROJECT_DIR$/media/media" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$" />
+      <recent name="$PROJECT_DIR$/media/None" />
+      <recent name="$PROJECT_DIR$/staff" />
+      <recent name="$PROJECT_DIR$/ticket/templates" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -272,6 +421,14 @@
       <option name="presentableId" value="Default" />
       <updated>1514561123947</updated>
     </task>
+    <task id="LOCAL-00001" summary="[FIX] add missing '{' '}' in f'String">
+      <created>1526550078142</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1526550078143</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TodoView">
@@ -284,7 +441,7 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="23" width="2558" height="1333" extended-state="0" />
+    <frame x="0" y="23" width="2560" height="1339" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info anchor="bottom" id="TODO" order="6" />
@@ -293,12 +450,12 @@
       <window_info anchor="bottom" id="Version Control" order="10" />
       <window_info anchor="bottom" id="Python Console" order="8" weight="0.32983023" />
       <window_info anchor="bottom" id="Run" order="2" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="9" sideWeight="0.49713877" visible="true" weight="0.32928804" />
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.12281399" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="9" sideWeight="0.49713877" visible="true" weight="0.33011273" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.9074519" visible="true" weight="0.08498809" />
       <window_info anchor="bottom" id="Docker" order="8" show_stripe_button="false" />
       <window_info anchor="right" id="Database" order="3" />
       <window_info anchor="right" id="SciView" order="3" />
-      <window_info id="Structure" order="1" side_tool="true" weight="0.24980143" />
+      <window_info id="Structure" order="1" sideWeight="0.09254808" side_tool="true" visible="true" weight="0.08498809" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -317,26 +474,16 @@
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
   </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="[FIX] add missing '{' '}' in f'String" />
+    <option name="LAST_COMMIT_MESSAGE" value="[FIX] add missing '{' '}' in f'String" />
+  </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <option name="time" value="2" />
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/ticket/signals.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="375">
-          <caret line="29" column="9" lean-forward="true" selection-start-line="29" selection-start-column="9" selection-end-line="29" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ticket/templates/ticket.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="300">
-          <caret line="20" column="87" selection-start-line="20" selection-start-column="87" selection-end-line="20" selection-end-column="87" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/ticket/forms.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="615">
@@ -566,31 +713,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/ticket/templates/list.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="690">
-          <caret line="52" column="48" selection-start-line="52" selection-start-column="48" selection-end-line="52" selection-end-column="48" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/projects/admin.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="60">
           <caret line="4" column="27" selection-start-line="4" selection-start-column="27" selection-end-line="4" selection-end-column="27" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ticketsystem/urls.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="285">
-          <caret line="23" column="48" selection-start-line="23" selection-start-column="48" selection-end-line="23" selection-end-column="48" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ticket/urls.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="9" column="16" selection-start-line="9" selection-start-column="10" selection-end-line="9" selection-end-column="16" />
         </state>
       </provider>
     </entry>
@@ -615,27 +741,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/ticket/models.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1950">
-          <caret line="130" column="26" selection-start-line="130" selection-start-column="26" selection-end-line="130" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ticket/forms.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="615">
-          <caret line="43" column="62" selection-start-line="43" selection-start-column="62" selection-end-line="43" selection-end-column="62" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ticket/views.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="23" column="36" lean-forward="true" selection-start-line="23" selection-start-column="36" selection-end-line="23" selection-end-column="36" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/ticket/templates/ticket.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="300">
@@ -643,34 +748,104 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/ticket/templates/base.html">
+    <entry file="file://$PROJECT_DIR$/ticket/signals.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="195">
-          <caret line="13" column="126" selection-start-line="13" selection-start-column="126" selection-end-line="13" selection-end-column="126" />
+        <state relative-caret-position="285">
+          <caret line="23" column="18" selection-start-line="22" selection-start-column="33" selection-end-line="23" selection-end-column="18" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/ticketsystem/settings.py">
+    <entry file="file://$PROJECT_DIR$/ticket/forms.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="176">
-          <caret line="85" column="4" selection-start-line="85" selection-start-column="4" selection-end-line="92" selection-end-column="6" />
+        <state relative-caret-position="180">
+          <caret line="14" column="97" selection-start-line="14" selection-start-column="97" selection-end-line="14" selection-end-column="97" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/ticket/admin.py">
+    <entry file="file://$PROJECT_DIR$/ticket/models.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="480">
-          <caret line="32" column="79" selection-start-line="32" selection-start-column="79" selection-end-line="32" selection-end-column="79" />
+        <state relative-caret-position="466">
+          <caret line="119" column="4" selection-start-line="119" selection-start-column="4" selection-end-line="122" selection-end-column="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ticket/views.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-708">
+          <caret line="76" column="21" selection-start-line="76" selection-start-column="21" selection-end-line="76" selection-end-column="21" />
+          <folding>
+            <element signature="e#0#9#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ticket/templates/list.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="270">
+          <caret line="18" column="58" selection-start-line="18" selection-start-column="58" selection-end-line="18" selection-end-column="58" />
+          <folding>
+            <element signature="n#style#0;n#tr#0;n#tbody#0;n#table#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#tr#1;n#tbody#0;n#table#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#tr#2;n#tbody#0;n#table#0;n#div#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/static/js/Keyboard-master/js/jquery.keyboard.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <folding>
+            <element signature="e#4#10#1" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ticket/utils.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="16" column="21" selection-start-line="16" selection-start-column="21" selection-end-line="16" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ticket/urls.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="315">
+          <caret line="21" column="1" lean-forward="true" selection-start-line="21" selection-start-column="1" selection-end-line="21" selection-end-column="1" />
           <folding>
             <element signature="e#0#32#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/ticket/signals.py">
+    <entry file="file://$PROJECT_DIR$/ticketsystem/urls.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="285">
-          <caret line="23" column="18" lean-forward="true" selection-start-line="22" selection-start-column="33" selection-end-line="23" selection-end-column="18" />
+        <state relative-caret-position="330">
+          <caret line="26" column="72" lean-forward="true" selection-start-line="26" selection-start-column="72" selection-end-line="26" selection-end-column="72" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ticketsystem/settings.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="545">
+          <caret line="145" selection-start-line="145" selection-end-line="145" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ticket/admin.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="442">
+          <caret line="52" column="56" selection-start-line="52" selection-start-column="56" selection-end-line="52" selection-end-column="56" />
+          <folding>
+            <element signature="e#0#32#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ticket/templates/base.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="225">
+          <caret line="15" column="72" selection-start-line="15" selection-start-column="72" selection-end-line="15" selection-end-column="72" />
         </state>
       </provider>
     </entry>

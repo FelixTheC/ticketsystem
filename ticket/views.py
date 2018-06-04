@@ -2,10 +2,12 @@ import os
 import urllib
 from django.core.exceptions import ObjectDoesNotExist
 from django.http import HttpResponse
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 # Create your views here.
 from django.urls import reverse
 from django.views.generic import UpdateView, DetailView, CreateView
+
+from ticket.utils import searching
 from ticketsystem.settings import BASE_DIR
 from .models import Ticket, Prioritaet
 from .models import DjangoMailboxMessage
@@ -47,8 +49,37 @@ def ticket_list(request):
     tickets = Ticket.objects.exclude(done=True)
     context = {
         'tickets': tickets,
-        'prio_form': PrioForm,
-        'done_form': DoneForm,
+        'done': False,
+    }
+    return render(request, 'list.html', context)
+
+
+def ticket_done_list(request):
+    tickets = Ticket.objects.exclude(done=False)
+    context = {
+        'tickets': tickets,
+        'done': True,
+    }
+    return render(request, 'list.html', context)
+
+
+def ticket_search(request, path):
+    searchtext = request.POST['searchtext']
+    tickets = Ticket.objects.none()
+    done = True
+    if path == '/overview/':
+        done = False
+
+    if searchtext == '':
+        return redirect(reverse('ticket:list'))
+    else:
+        tmp = searching(Ticket, searchtext)
+        for i in tmp:
+            i = i.filter(done=done)
+            tickets = i | tickets  # merge Querysets
+    context = {
+        'tickets': tickets,
+        'done': done,
     }
     return render(request, 'list.html', context)
 

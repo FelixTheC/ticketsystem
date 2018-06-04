@@ -10,6 +10,8 @@ from .views import UpdateCommentView
 app_name='ticket'
 urlpatterns = [
     url(r'^overview/$', views.ticket_list, name='list'),
+    url(r'^overview_done/$', views.ticket_done_list, name='donelist'),
+    url(r'^ticket_search/(?P<path>.*)/$', views.ticket_search, name='ticketsearch'),
     url(r'^$', TicketCreateView.as_view(), name='create_ticket'),
     url(r'^update_prio/(?P<pk>[\d]+)/$', PrioUpdateView.as_view(), name='update_prioritaet'),
     url(r'^update_done/(?P<pk>[\d]+)/$', DoneUpdateView.as_view(), name='update_done'),

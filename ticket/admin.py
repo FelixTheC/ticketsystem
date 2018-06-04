@@ -1,9 +1,12 @@
 from django.contrib import admin
 from django.core.mail import send_mail
-
+from datetime import date
+from datetime import timedelta
 from staff.models import Staff
 from .models import Ticket
 from .models import Prioritaet
+
+SALESINTERNMAIL = 'salesintern@vectronic-aerospace.com'
 
 
 def send_done_mail(obj):
@@ -13,7 +16,41 @@ def send_done_mail(obj):
         message=f'Your Subject: {obj.subject} \n\n Your Ticketmessage:  {obj.comment} \n\n '
                 f'IT-Notice:\n\n {obj.progress} \n\nWe could resolve your Problem \n\nWith best regards from  {obj.assigned_to}',
         from_email='it@vectronic-aerospace.com',
-        recipient_list=[staff_obj.email],
+        recipient_list=[staff_obj.email, SALESINTERNMAIL],
+        fail_silently=False
+    )
+
+
+def send_progress_changed_mail(obj):
+    staff_obj = Staff.objects.get(initialies=obj.from_email)
+    send_mail(
+        subject=f'{obj.subject} -CHANGED',
+        message=f'IT comment/progress has changed at {obj.changed_timestamp}: \n\n{obj.progress}\n\n',
+        from_email=f'{obj.assigned_to}@vectronic-aerospace.com',
+        recipient_list=[staff_obj.email, SALESINTERNMAIL],
+        fail_silently=False
+    )
+
+
+def send_prioritaet_changed_mail(obj):
+    staff_obj = Staff.objects.get(initialies=obj.from_email)
+    send_mail(
+        subject=f'{obj.subject} -CHANGED',
+        message=f'IT prioritaet has changed to: \n\n{obj.prioritaet}\n\n',
+        from_email=f'{obj.assigned_to}@vectronic-aerospace.com',
+        recipient_list=[staff_obj.email, SALESINTERNMAIL],
+        fail_silently=False
+    )
+
+
+def send_assigned_to_mail(obj):
+    staff_obj = Staff.objects.get(initialies=obj.from_email)
+    send_mail(
+        subject=f'{obj.subject} - ACCEPTED',
+        message=f'{obj.subject} is assigned to: {obj.assigned_to}\n\nProgress: {obj.it_status}'
+                f'\nexpected completion date: {obj.finished_until}',
+        from_email=f'{obj.assigned_to}@vectronic-aerospace.com',
+        recipient_list=[staff_obj.email, SALESINTERNMAIL],
         fail_silently=False
     )
 
@@ -39,10 +76,22 @@ class TicketAdmin(admin.ModelAdmin):
         return super(TicketAdmin, self).get_queryset(request)
 
     def save_model(self, request, obj, form, change):
+        if not obj.finished_until:
+            obj.finished_until = date.today() + timedelta(days=30)
         if not obj.assigned_to:
             obj.assigned_to = request.user.username
-        if obj.done:
-            send_done_mail(obj)
+            obj.it_status = 'In Progress'
+            send_assigned_to_mail(obj)
+        else:
+            if obj.done:
+                send_done_mail(obj)
+            if obj.progress != form.cleaned_data['progress']:
+                send_progress_changed_mail(obj)
+                obj.changed_timestamp = date.today()
+            if obj.prioritaet != form.cleaned_data['prioritaet']:
+                send_progress_changed_mail(obj)
+        if not obj.finished_until:
+            obj.finished_until = date.today() + timedelta(days=30)
         return super(TicketAdmin, self).save_model(request, obj, form, change)
 
 

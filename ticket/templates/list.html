@@ -3,11 +3,24 @@
 
 <div class="col-md-12 col-lg-12">
     <h1 style="margin-left:40%">Ticket Manager</h1>
+    <div class="float-left">
+        <form method="post" action="{% url 'ticket:ticketsearch' request.path %}" style="float:right; display: inline-grid; background-color:white">
+            {% csrf_token %}
+            <input type="text" name="searchtext", id="searchtext">
+            <input type="submit" value="Search/Clear" class="btn btn-dark btn-sm">
+        </form>
+    </div>
     <a href="{% url 'ticket:create_ticket' %}" class="btn btn-primary" style="float:right">Create Ticket</a>
-    <table class="table table-striped">
+    {% if done %}
+        <a href="{% url 'ticket:list' %}" class="btn btn-success" style="float:right">Show open Tickets</a>
+    {% else %}
+        <a href="{% url 'ticket:donelist' %}" class="btn btn-success" style="float:right">Show done Tickets</a>
+    {% endif %}
+    <table class="table table-striped tablesorter my-table" id="demo-table" >
         <thead>
             <tr>
                 <td><b>Created At</b></td>
+                <td><b>Project</b></td>
                 <td><b>Subject</b></td>
                 <td><b>From</b></td>
                 <td><b>Comment</b></td>
@@ -21,16 +34,21 @@
         </thead>
         <tbody>
         {% for ticket in tickets %}
-            {% if ticket.prioritaet.pk == 1 %}
-                <tr style="background-color:indianred">
-            {% elif ticket.prioritaet.pk == 2 %}
-                <tr style="background-color:coral">
-            {% elif ticket.prioritaet.pk == 3 %}
-                <tr style="background-color:darkseagreen">
+            {% if ticket.done == False %}
+                {% if ticket.prioritaet.pk == 1 %}
+                    <tr style="background-color:indianred">
+                {% elif ticket.prioritaet.pk == 2 %}
+                    <tr style="background-color:coral">
+                {% elif ticket.prioritaet.pk == 3 %}
+                    <tr style="background-color:darkseagreen">
+                {% else %}
+                    <tr>
+                {% endif %}
             {% else %}
                 <tr>
             {% endif %}
             <td>{{ ticket.created_at }}</td>
+            <td>{{ ticket.project }}</td>
             <td>{{ ticket.subject }}</td>
             <td>{{ ticket.from_email }}</td>
             <td>{{ ticket.comment|truncatechars:30 }}</td>
@@ -38,13 +56,6 @@
             <td>{{ ticket.progress }}</td>
             <td>{{ ticket.assigned_to }}</td>
             <td><a href="{{ ticket.get_update_comment_url }}">Update Comment</a></td>
-            <!--<td>-->
-                <!--<form action="{% url 'ticket:update_done' ticket.pk %}", method="post" style="display: -webkit-inline-box;">-->
-                    <!--{% csrf_token %}-->
-                    <!--{{ done_form.as_p }}-->
-                    <!--<input type="submit" value="Done" class="btn btn-primary btn-sm" style="margin-left: 10px;">-->
-                <!--</form>-->
-            <!--</td>-->
             {% if ticket.file %}
                 <td><a href="{{ ticket.get_attachment }}">File</a></td>
             {% else %}
@@ -61,9 +72,36 @@
 {% endblock %}
 {% block script %}
 <script>
-    function reload() {
-            location.reload();
-        }
-    $(document).ready(setTimeout(reload, 18000));
+    // function reload() {
+    //         location.reload();
+    //     }
+    // $(document).ready(setTimeout(reload, 18000));
+</script>
+<script>
+    $(function() {
+        var thHeight = $("table#demo-table th:first").height();
+        $("table#demo-table th").resizable({
+          handles: "e",
+          minHeight: thHeight,
+          maxHeight: thHeight,
+          minWidth: 40,
+          resize: function (event, ui) {
+            var sizerID = "#" + $(event.target).attr("id") + "-sizer";
+            $(sizerID).width(ui.size.width);
+          }
+        });
+    });
+
+</script>
+<script>
+    $(document).ready(function() {
+	    $("#demo-table").tablesorter();
+
+        $('#clear').click(function() {
+            $("#demo-table .box-nr").each(function(){
+                $(this).parent().show();
+            });
+        });
+    });
 </script>
 {% endblock %}

@@ -6,6 +6,14 @@ from projects.models import Project
 from ticketsystem import settings
 from .signals import send_mail_done_receiver
 from .signals import send_mail_create_receiver
+from datetime import datetime
+from datetime import timedelta
+
+ITSTATUS = (
+    ('', ''),
+    ('In Progress', 'In Progress'),
+    ('Waiting for Customer respond', 'Waiting for Customer respond')
+)
 
 
 def file_upload_path(instance, filename, **kwargs):
@@ -80,6 +88,9 @@ class Ticket(models.Model):
     done = models.BooleanField(default=False, blank=True)
     created_at = models.DateTimeField(blank=True, null=True)
     assigned_to = models.CharField(null=True, blank=True, max_length=100)
+    changed_timestamp = models.DateTimeField(default=datetime.today(), editable=False)
+    it_status = models.CharField(max_length=100, blank=True, null=True, default='---', choices=ITSTATUS)
+    finished_until = models.DateField(default=datetime.today() + timedelta(days=30), null=True, blank=True)
 
     class Meta:
         ordering = ['done', 'prioritaet', '-created_at']
