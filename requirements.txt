@@ -8,7 +8,7 @@ dj-static==0.0.6
 Django==1.11.6
 django-easy-pdf==0.1.1
 django-mailbox==4.6.0
-html5lib==0.999999999
+html5lib==1.0b10
 httplib2==0.10.3
 Jinja2==2.10
 MarkupSafe==1.0
@@ -33,3 +33,4 @@ WeasyPrint==0.41
 webencodings==0.5.1
 xhtml2pdf==0.2b1
 bs4
+django-staticfiles

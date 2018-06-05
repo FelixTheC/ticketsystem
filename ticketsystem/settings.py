@@ -15,6 +15,7 @@ import sys
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+PROJECT_DIR = os.path.dirname(os.path.abspath(__file__))
 
 
 # Quick-start development settings - unsuitable for production
@@ -24,7 +25,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = 'zt)21#3gy0(+_su5u6s7vnoh_-8h&&q42dm@xrq*j0ghy-&os*'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = ['localhost', '192.168.0.34', '127.0.0.1', 'europa']
 
@@ -41,7 +42,7 @@ INSTALLED_APPS = [
     'ticket',
     'staff',
     'projects',
-    #''django_mailbox',
+    #'django_mailbox',
 ]
 
 MIDDLEWARE = [
@@ -141,9 +142,13 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/1.11/howto/static-files/
 
 STATIC_URL = '/static/'
+STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
-STATIC_ROOT = os.path.join(BASE_DIR, 'static')
+
+STATICFILES_DIRS = (
+    os.path.join(BASE_DIR, 'static'),
+)
 
 
 EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
