@@ -15,6 +15,7 @@ Including another URLconf
 """
 from django.conf.urls import url, include
 from django.conf.urls.static import static
+from django.conf.urls.static import serve
 from django.contrib import admin
 
 from ticketsystem import settings
@@ -22,6 +23,8 @@ from ticketsystem import settings
 urlpatterns = [
     url(r'^', include('ticket.urls', namespace='ticket')),
     url(r'^admin/', admin.site.urls, name='admin'),
+    url(r'^media/(?P<path>.*)$', serve, {'document_root': settings.MEDIA_ROOT}),
+    url(r'^static/(?P<path>.*)$', serve, {'document_root': settings.STATIC_ROOT}),
 ]
 # if settings.DEBUG:
 #     urlpatterns += static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)

@@ -33,4 +33,4 @@ WeasyPrint==0.41
 webencodings==0.5.1
 xhtml2pdf==0.2b1
 bs4
-django-staticfiles
+WhiteNoise
