@@ -4,24 +4,26 @@
 
 <div class="container">
     <div class="col-md-6 col-lg-6">
+        <h2><b>Project:</b> {{ object.project }}</h2>
         <h2><b>Subject:</b> {{ object.subject }}</h2>
         <h3><b>Prioritaet:</b> {{ object.prioritaet.name }}</h3>
+        <h4>Information from sales:</h4>
         <ul>
             <li>From: <b>{{ object.from_email }}</b></li>
             <li>Comment: <b>{{ object.comment|breaktext }}</b></li>
-        </ul>
-
-        {% if ticket.file %}
-                <p><a href="{{ ticket.get_attachment }}">Download File</a></p>
-            {% else %}
-                <p></p>
+            <li><b>Created at: </b>{{ object.created_at|date:'Y-m-d' }}</li>
+            {% if ticket.file %}
+                <li><a href="{{ ticket.get_attachment }}">Download File</a></li>
             {% endif %}
-
-        <form method="post" action="{{ object.get_update_progress_url }}">
-            {% csrf_token %}
-            {{ form.as_p }}
-            <input type="submit" value="Submit progress" class="btn btn-primary">
-        </form>
+        </ul>
+        <h4>IT information and status</h4>
+        <ul>
+            <li><b>Assigned to: </b>{{ object.assigned_to }}</li>
+            <li><b>Progress: </b>{{ object.progress }}</li>
+            <li><b>It status: </b>{{ object.it_status }}</li>
+            <li><b>Last change: </b>{{ object.changed_timestamp|date:'Y-m-d' }}</li>
+            <li><b>Planned completion: </b>{{ object.finished_until|date:'Y-m-d' }}</li>
+        </ul>
         <br>
         <a href="{% url 'ticket:list' %}" class="btn btn-secondary">Back</a>
     </div>

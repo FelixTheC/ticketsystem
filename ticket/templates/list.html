@@ -20,6 +20,8 @@
         <thead>
             <tr>
                 <td><b>Created At</b></td>
+                <td><b>Last change</b></td>
+                <td><b>Done until</b></td>
                 <td><b>Project</b></td>
                 <td><b>Subject</b></td>
                 <td><b>From</b></td>
@@ -27,9 +29,9 @@
                 <td><b>Prioritaet</b></td>
                 <td><b>Progress</b></td>
                 <td><b>Assigned to</b></td>
-                <td><b>Update Comment</b></td>
-                <td></td>
-                <td><b>Edit</b></td>
+                <td><b>View detail</b></td>
+                <td><b>File</b></td>
+                <td><b>O</b></td>
             </tr>
         </thead>
         <tbody>
@@ -47,7 +49,9 @@
             {% else %}
                 <tr>
             {% endif %}
-            <td>{{ ticket.created_at }}</td>
+            <td>{{ ticket.created_at|date:'Y-m-d' }}</td>
+            <td>{{ ticket.changed_timestamp|date:'Y-m-d' }}</td>
+            <td>{{ ticket.finished_until|date:'Y-m-d' }}</td>
             <td>{{ ticket.project }}</td>
             <td>{{ ticket.subject }}</td>
             <td>{{ ticket.from_email }}</td>
@@ -55,13 +59,13 @@
             <td>{{ ticket.prioritaet }}</td>
             <td>{{ ticket.progress }}</td>
             <td>{{ ticket.assigned_to }}</td>
-            <td><a href="{{ ticket.get_update_comment_url }}">Update Comment</a></td>
+            <td><a href="{{ ticket.get_detail_url }}">Details</a></td>
             {% if ticket.file %}
                 <td><a href="{{ ticket.get_attachment }}">File</a></td>
             {% else %}
                 <td></td>
             {% endif %}
-            <td><a href="{{ ticket.get_admin_url }}">Edit</a></td>
+            <td><a href="{{ ticket.get_admin_url }}">[X]</a></td>
         </tr>
 
     {% endfor %}
