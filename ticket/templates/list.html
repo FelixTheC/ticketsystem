@@ -30,6 +30,7 @@
                 <td><b>Progress</b></td>
                 <td><b>Assigned to</b></td>
                 <td><b>View detail</b></td>
+                <td><b>Update</b></td>
                 <td><b>File</b></td>
                 <td><b>O</b></td>
             </tr>
@@ -60,6 +61,7 @@
             <td>{{ ticket.progress }}</td>
             <td>{{ ticket.assigned_to }}</td>
             <td><a href="{{ ticket.get_detail_url }}">Details</a></td>
+            <td><a href="{{ ticket.get_update_comment_url }}">Update</a></td>
             {% if ticket.file %}
                 <td><a href="{{ ticket.get_attachment }}">File</a></td>
             {% else %}

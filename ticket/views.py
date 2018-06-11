@@ -1,12 +1,15 @@
 import os
 import urllib
 from django.core.exceptions import ObjectDoesNotExist
+from django.core.mail import send_mail
 from django.http import HttpResponse
 from django.shortcuts import render, redirect
 # Create your views here.
 from django.urls import reverse
 from django.views.generic import UpdateView, DetailView, CreateView
 
+from staff.models import Staff
+from ticket.admin import ITMEMBERMAIL
 from ticket.utils import searching
 from ticketsystem.settings import BASE_DIR
 from .models import Ticket, Prioritaet
@@ -127,9 +130,10 @@ class DoneUpdateView(UpdateView):
 class UpdateCommentView(UpdateView):
     model = Ticket
     template_name = 'ticket.html'
-    fields = ('comment',)
+    fields = ('comment', 'file')
     
     def get_success_url(self):
+        send_update_notice_email(self.object)
         return reverse('ticket:list')
     
     def form_valid(self, form):
@@ -178,3 +182,15 @@ def download_file(request, pk):
         filename_header = 'filename*=UTF-8\'\'%s' % urllib.parse.quote(original_filename.encode('utf-8'))
     response['Content-Disposition'] = 'attachment; ' + filename_header
     return response
+
+
+def send_update_notice_email(obj):
+    staff_obj = Staff.objects.get(initialies=obj.from_email)
+    send_mail(
+        subject=f'{obj.subject} - UPDATED',
+        message=f'{obj.subject} comment or file has been updated \n\n'
+                f'http://192.168.0.34:9004/admin/ticket/ticket/{obj.pk}/change/',
+        from_email=staff_obj.email,
+        recipient_list=['it@vectronic-aerospace.com', ],
+        fail_silently=False
+    )
