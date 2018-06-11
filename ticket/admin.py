@@ -92,13 +92,13 @@ class TicketAdmin(admin.ModelAdmin):
             obj.assigned_to = request.user.username
             obj.it_status = 'In Progress'
             send_assigned_to_mail(obj)
-        else:
+        if obj.assigned_to:
             if obj.done:
                 send_done_mail(obj)
-            if obj.progress != form.cleaned_data['progress']:
+            elif 'progress' in form.changed_data:
                 send_progress_changed_mail(obj)
                 obj.changed_timestamp = date.today()
-            if obj.prioritaet != form.cleaned_data['prioritaet']:
+            elif 'prioritaet' in form.changed_data:
                 send_progress_changed_mail(obj)
         if not obj.finished_until:
             obj.finished_until = date.today() + timedelta(days=30)
