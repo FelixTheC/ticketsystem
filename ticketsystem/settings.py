@@ -25,6 +25,7 @@ SECRET_KEY = 'zt)21#3gy0(+_su5u6s7vnoh_-8h&&q42dm@xrq*j0ghy-&os*'
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
+DEVELOPMENT = True
 
 ALLOWED_HOSTS = ['localhost', '192.168.0.34', '127.0.0.1', 'europa']
 
@@ -78,30 +79,33 @@ WSGI_APPLICATION = 'ticketsystem.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/1.11/ref/settings/#databases
 
-DATABASES = {
-    # 'default': {
-    #     'ENGINE': 'django.db.backends.sqlite3',
-    #     'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
-    # },
-    'default': {
-        'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': 'TicketDB',
-        'USER': 'felixeisenmenger',
-        'PASSWORD': 'vasneu',
-        'HOST': '192.168.0.26',
-        'PORT': '5432',
-    },
-    'staff_db': {
-        'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': 'CollarDB',
-        'USER': 'felixeisenmenger',
-        'PASSWORD': 'vasneu',
-        'HOST': '192.168.0.26',
-        'PORT': '5432',
-    },
-}
-
-DATABASE_ROUTERS = ['staff.StaffRouter.StaffRouter', ]
+if DEVELOPMENT:
+    DATABASES = {
+        'default': {
+            'ENGINE': 'django.db.backends.sqlite3',
+            'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+        },
+    }
+else:
+    DATABASES = {
+        'default': {
+            'ENGINE': 'django.db.backends.postgresql_psycopg2',
+            'NAME': 'TicketDB',
+            'USER': 'felixeisenmenger',
+            'PASSWORD': 'vasneu',
+            'HOST': '192.168.0.26',
+            'PORT': '5432',
+        },
+        'staff_db': {
+            'ENGINE': 'django.db.backends.postgresql_psycopg2',
+            'NAME': 'CollarDB',
+            'USER': 'felixeisenmenger',
+            'PASSWORD': 'vasneu',
+            'HOST': '192.168.0.26',
+            'PORT': '5432',
+        },
+    }
+    DATABASE_ROUTERS = ['staff.StaffRouter.StaffRouter', ]
 
 
 # Password validation

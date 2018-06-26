@@ -1,4 +1,3 @@
-from django.core import urlresolvers
 from django.db import models
 from django.db.models.signals import post_save
 from django.urls import reverse
@@ -90,7 +89,7 @@ class Ticket(models.Model):
     assigned_to = models.CharField(null=True, blank=True, max_length=100)
     changed_timestamp = models.DateTimeField(default=datetime.today(), editable=False)
     it_status = models.CharField(max_length=100, blank=True, null=True, default='---', choices=ITSTATUS)
-    finished_until = models.DateField(default=datetime.today() + timedelta(days=30), null=True, blank=True)
+    finished_until = models.DateField(default=datetime.now() + timedelta(days=30), null=True, blank=True)
 
     class Meta:
         ordering = ['done', 'prioritaet', '-created_at']

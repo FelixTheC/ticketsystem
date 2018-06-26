@@ -90,7 +90,8 @@ class TicketAdmin(admin.ModelAdmin):
             obj.finished_until = date.today() + timedelta(days=30)
         if not obj.assigned_to:
             obj.assigned_to = request.user.username
-            obj.it_status = 'In Progress'
+            if obj.it_status is None:
+                obj.it_status = 'In Progress'
             send_assigned_to_mail(obj)
         if obj.assigned_to:
             if obj.done:
