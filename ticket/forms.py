@@ -41,7 +41,7 @@ class TicketForm(forms.ModelForm):
         }
 
         help_texts = {
-            'project': 'The project in which the error occurse',
+            'project': 'The project in which the error occurred',
             'subject': 'Title of the problem',
         }
 

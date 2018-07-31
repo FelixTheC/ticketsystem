@@ -11,7 +11,8 @@ MAILPREFIX = '@vectronic-aerospace.com'
 ITMEMBERMAIL = {
     'felixeisenmenger': f'felixeisenmenger{MAILPREFIX}',
     'tobiaskoppe': f'tkoppe{MAILPREFIX}',
-    'veitzimmermann': f'zimmermann{MAILPREFIX}'
+    'veitzimmermann': f'zimmermann{MAILPREFIX}',
+    'florianmueller': f'florianmueller{MAILPREFIX}',
 }
 
 
