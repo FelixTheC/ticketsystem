@@ -4,12 +4,9 @@ from django.core.exceptions import ObjectDoesNotExist
 from django.core.mail import send_mail
 from django.http import HttpResponse
 from django.shortcuts import render, redirect
-# Create your views here.
 from django.urls import reverse
 from django.views.generic import UpdateView, DetailView, CreateView
-
 from staff.models import Staff
-from ticket.admin import ITMEMBERMAIL
 from ticket.utils import searching
 from ticketsystem.settings import BASE_DIR
 from .models import Ticket, Prioritaet

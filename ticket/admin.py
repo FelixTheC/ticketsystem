@@ -1,4 +1,5 @@
 from django.contrib import admin
+from django.contrib.auth.models import User
 from django.core.mail import send_mail
 from datetime import date
 from datetime import timedelta
@@ -7,18 +8,11 @@ from .models import Ticket
 from .models import Prioritaet
 
 SALESINTERNMAIL = 'salesintern@vectronic-aerospace.com'
-MAILPREFIX = '@vectronic-aerospace.com'
-ITMEMBERMAIL = {
-    'felixeisenmenger': f'felixeisenmenger{MAILPREFIX}',
-    'tobiaskoppe': f'tkoppe{MAILPREFIX}',
-    'veitzimmermann': f'zimmermann{MAILPREFIX}',
-    'florianmueller': f'florianmueller{MAILPREFIX}',
-}
 
 
 def send_done_mail(obj):
     staff_obj = Staff.objects.get(initialies=obj.from_email)
-    it_member = ITMEMBERMAIL[obj.assigned_to]
+    it_member = User.objects.get(username=obj.assigned_to).email
     send_mail(
         subject=f'{obj.subject} - DONE',
         message=f'Your Subject: {obj.subject} \n\n Your Ticketmessage:  {obj.comment} \n\n '
@@ -31,7 +25,7 @@ def send_done_mail(obj):
 
 def send_progress_changed_mail(obj):
     staff_obj = Staff.objects.get(initialies=obj.from_email)
-    it_member = ITMEMBERMAIL[obj.assigned_to]
+    it_member = User.objects.get(name=obj.assigned_to)
     send_mail(
         subject=f'{obj.subject} -CHANGED',
         message=f'IT comment/progress has changed at {obj.changed_timestamp}: \n\n{obj.progress}\n\n',
@@ -43,7 +37,7 @@ def send_progress_changed_mail(obj):
 
 def send_prioritaet_changed_mail(obj):
     staff_obj = Staff.objects.get(initialies=obj.from_email)
-    it_member = ITMEMBERMAIL[obj.assigned_to]
+    it_member = User.objects.get(name=obj.assigned_to)
     send_mail(
         subject=f'{obj.subject} -CHANGED',
         message=f'IT prioritaet has changed to: \n\n{obj.prioritaet}\n\n',
@@ -55,7 +49,7 @@ def send_prioritaet_changed_mail(obj):
 
 def send_assigned_to_mail(obj):
     staff_obj = Staff.objects.get(initialies=obj.from_email)
-    it_member = ITMEMBERMAIL[obj.assigned_to]
+    it_member = User.objects.get(name=obj.assigned_to)
     send_mail(
         subject=f'{obj.subject} - ACCEPTED',
         message=f'{obj.subject} is assigned to: {obj.assigned_to}\n\nProgress: {obj.it_status}'
