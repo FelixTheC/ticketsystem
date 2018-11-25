@@ -1,6 +1,9 @@
 from django.db import models
 from django.db.models.signals import post_save
-from django.urls import reverse
+try:
+    from django.urls import reverse
+except ModuleNotFoundError:
+    from django.core.urlresolvers import reverse
 from projects.models import Project
 from ticketsystem import settings
 from .signals import send_mail_done_receiver

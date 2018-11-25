@@ -7,23 +7,23 @@ from staff.models import Staff
 from .models import Ticket
 from .models import Prioritaet
 
-SALESINTERNMAIL = 'salesintern@vectronic-aerospace.com'
+SALESINTERNMAIL = 'barfoo@foobar.com'
 
 
-def send_done_mail(obj):
+def send_done_mail(mail,  obj):
     staff_obj = Staff.objects.get(initialies=obj.from_email)
-    it_member = User.objects.get(username=obj.assigned_to).email
+    it_member = User.objects.get(username=obj.assigned_to)
     send_mail(
         subject=f'{obj.subject} - DONE',
         message=f'Your Subject: {obj.subject} \n\n Your Ticketmessage:  {obj.comment} \n\n '
                 f'IT-Notice:\n\n {obj.progress} \n\nWe could resolve your Problem \n\nWith best regards from  {obj.assigned_to}',
-        from_email='it@vectronic-aerospace.com',
+        from_email='foo@bar.com',
         recipient_list=[staff_obj.email, SALESINTERNMAIL, it_member],
         fail_silently=False
     )
 
 
-def send_progress_changed_mail(obj):
+def send_progress_changed_mail(mail,  obj):
     staff_obj = Staff.objects.get(initialies=obj.from_email)
     it_member = User.objects.get(name=obj.assigned_to)
     send_mail(
@@ -35,7 +35,7 @@ def send_progress_changed_mail(obj):
     )
 
 
-def send_prioritaet_changed_mail(obj):
+def send_prioritaet_changed_mail(mail,  obj):
     staff_obj = Staff.objects.get(initialies=obj.from_email)
     it_member = User.objects.get(name=obj.assigned_to)
     send_mail(
@@ -47,7 +47,7 @@ def send_prioritaet_changed_mail(obj):
     )
 
 
-def send_assigned_to_mail(obj):
+def send_assigned_to_mail(mail,  obj):
     staff_obj = Staff.objects.get(initialies=obj.from_email)
     it_member = User.objects.get(name=obj.assigned_to)
     send_mail(
@@ -87,15 +87,15 @@ class TicketAdmin(admin.ModelAdmin):
             obj.assigned_to = request.user.username
             if obj.it_status is None:
                 obj.it_status = 'In Progress'
-            send_assigned_to_mail(obj)
+            send_assigned_to_mail(request.user.email, obj)
         if obj.assigned_to:
             if obj.done:
-                send_done_mail(obj)
+                send_done_mail(request.user.email, obj)
             elif 'progress' in form.changed_data:
-                send_progress_changed_mail(obj)
+                send_progress_changed_mail(request.user.email, obj)
                 obj.changed_timestamp = date.today()
             elif 'prioritaet' in form.changed_data:
-                send_progress_changed_mail(obj)
+                send_progress_changed_mail(request.user.email, obj)
         if not obj.finished_until:
             obj.finished_until = date.today() + timedelta(days=30)
         return super(TicketAdmin, self).save_model(request, obj, form, change)

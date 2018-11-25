@@ -12,7 +12,7 @@ def send_mail_done_receiver(sender, instance, *args, **kwargs):
             subject=f'[Ticketsystem] {instance.subject}',
             message=f'Your Subject: {instance.subject} \n\n We could resolve your Problem '
                     f'\n\n With best regards your it-Team from VECTRONIC Aerospace ',
-            from_email='it@vectronic-aerospace.com',
+            from_email='foo@bar.com',
             recipient_list=[staff_obj.email],
             fail_silently=False
         )
@@ -26,6 +26,6 @@ def send_mail_create_receiver(sender, instance, *args, **kwargs):
             message=f'A new ticket was created \n\n Subject: {instance.subject} \n\n'
                     f' http://192.168.0.34:9004/admin/ticket/ticket/{instance.pk}/change/',
             from_email=staff.email,
-            recipient_list=['it@vectronic-aerospace.com'],
+            recipient_list=['foo@bar.com'],
             fail_silently=False
         )

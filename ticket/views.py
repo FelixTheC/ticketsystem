@@ -188,6 +188,6 @@ def send_update_notice_email(obj):
         message=f'{obj.subject} comment or file has been updated \n\n'
                 f'http://192.168.0.34:9004/admin/ticket/ticket/{obj.pk}/change/',
         from_email=staff_obj.email,
-        recipient_list=['it@vectronic-aerospace.com', ],
+        recipient_list=['foo@bar.com', ],
         fail_silently=False
     )

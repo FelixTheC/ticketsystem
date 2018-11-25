@@ -91,16 +91,16 @@ else:
         'default': {
             'ENGINE': 'django.db.backends.postgresql_psycopg2',
             'NAME': 'TicketDB',
-            'USER': 'felixeisenmenger',
-            'PASSWORD': 'vasneu',
+            'USER': 'foo',
+            'PASSWORD': 'bar',
             'HOST': '192.168.0.26',
             'PORT': '5432',
         },
         'staff_db': {
             'ENGINE': 'django.db.backends.postgresql_psycopg2',
             'NAME': 'CollarDB',
-            'USER': 'felixeisenmenger',
-            'PASSWORD': 'vasneu',
+            'USER': 'foo',
+            'PASSWORD': 'bar',
             'HOST': '192.168.0.26',
             'PORT': '5432',
         },
@@ -154,7 +154,7 @@ ADMIN_MEDIA_PREFIX = '/static/admin/'
 EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
 EMAIL_HOST = '192.168.0.22'
 EMAIL_HOST_USER = 'it'
-EMAIL_HOST_PASSWORD = '2QSdDvydqD0SvGSOP6iB'
+EMAIL_HOST_PASSWORD = 'bar'
 EMAIL_PORT = 25
 
 if 'test' in sys.argv or 'test_coverage' in sys.argv:
